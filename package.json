@@ -1,0 +1,18 @@
+{
+  "name": "ytd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omkar Parekh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "npm": "^6.14.5",
+    "ytdl-core": "^2.1.2"
+  }
+}
