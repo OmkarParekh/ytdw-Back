@@ -15,7 +15,6 @@ App.get('/',(req,res)=>{
      res.send('hello')
 })
 
-
 // ytdl Downloader
 App.get('/i',(req,res)=>{
      var id =req.query.id;
@@ -32,16 +31,19 @@ App.get('/i',(req,res)=>{
              .thumbnails[0].url,
              Video_Format:format.qualityLabel,
              Video_Url:format.url,
-             Audio_Url:af[0].url
+             Audio_Url:af[0].url,
+             audio_extension: af[0].container,
+             video_extension: format.container
+
         }
         // response 
         res.send(obj) 
+        console.log('Data has Send')
     })
     
-
 // Hosting Port 
 })
-App.listen(process.env.PORT || 3000,(req,res)=>{
+App.listen(process.env.PORT || 3001,(req,res)=>{
      console.log('Server is Started')
 })
 
